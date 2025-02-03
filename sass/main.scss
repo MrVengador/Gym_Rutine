@@ -1,0 +1,22 @@
+// Se definen los colores principales del tema
+$first-color: #352F44;
+$second-color: #5C5470;
+$third-color: #B9B4C7;
+$fourth-color: #FAF0E6;
+
+// Se crea un mapa de colores
+$Gym-colors: (
+    "first-color": $first-color,
+    "second-color": $second-color,
+    "third-color": $third-color,
+    "fourth-color": $fourth-color
+);
+
+@import '../node_modules/bootstrap/scss//functions';
+@import '../node_modules/bootstrap/scss/variables';
+
+// Se fusiona el mapa de colores con los colores del tema de Bootstrap
+$theme-colors: map-merge($Gym-colors, $theme-colors);
+
+// Importamos las librerías fuente de Bootstrap para comenzar a agregar las modificaciones
+@import '../node_modules/bootstrap/scss/bootstrap';
